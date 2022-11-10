@@ -11,7 +11,7 @@
 
 ## API Endpoints
 
-* POST "http://localhost:3000/api/v1/customers/1/customer_subscriptions?customer_id=1&subscription_id=1"
+* POST "http://localhost:3000/api/v1/customers/1/subscriptions?customer_id=1&subscription_id=1"
 
 ```JSON
 {
@@ -25,7 +25,7 @@
   }
 ```
 
-* Patch "http://localhost:3000/api/v1/customers/1/customer_subscriptions/1?subscription_id=1&is_subscribed=0"
+* Patch "http://localhost:3000/api/v1/customers/1/subscriptions/1?subscription_id=1&is_subscribed=0"
 
 ```JSON
 {
@@ -40,7 +40,7 @@
 status: accepted
 ```
 
-* GET "http://localhost:3000/api/v1/customer/1"
+* GET "http://localhost:3000/api/v1/customer/1?customer_id=1"
 ```JSON
 {
   "data":[

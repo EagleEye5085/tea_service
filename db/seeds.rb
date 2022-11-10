@@ -957,3 +957,13 @@ tea_json = [
 tea_json.each do |tea|
   Tea.create(title: tea[:name], description: tea[:description], temperature: tea[:temperature], brew_time: tea[:brew_time])
 end
+
+customer = Customer.create(first_name: "Tom", last_name: "Tom", email: "tomtom@gmail.com", address: "123 tom st.")
+
+
+subscription_1 =Subscription.create(title: "good tea", price: 50, status: "active", frequency: "5 months")
+subscription_2 =Subscription.create(title: "meh tea", price: 50, status: "active", frequency: "5 months")
+Subscription.create(title: "bad tea", price: 50, status: "active", frequency: "5 months")
+
+CustomerSubscription.create(customer_id: customer.id, subscription_id: subscription_1.id)
+CustomerSubscription.create(customer_id: customer.id, subscription_id: subscription_2.id)
