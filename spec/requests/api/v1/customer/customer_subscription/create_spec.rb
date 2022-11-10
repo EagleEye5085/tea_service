@@ -13,6 +13,8 @@ RSpec.describe CustomerSubscription do
 
       post api_v1_customer_subscriptions_path(create_body)
 
+      customer_subscriptions = JSON.parse(response.body, symbolize_names: true)
+
       expect(response).to be_successful
 
       expect(CustomerSubscription.last.customer_id).to eq(customer.id)

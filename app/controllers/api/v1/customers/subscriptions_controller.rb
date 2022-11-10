@@ -4,8 +4,6 @@ class Api::V1::Customers::SubscriptionsController < ApplicationController
     customer_subscription = CustomerSubscription.new(customer_subscription_params)
     if customer_subscription.save
       render json: CustomerSubscriptionSerializer.new(customer_subscription), status: 201
-    else
-      render json: { description: 'Error: Incorrect parameters' }, status: 401
     end
   end
 
@@ -13,8 +11,6 @@ class Api::V1::Customers::SubscriptionsController < ApplicationController
      customer_subscription = CustomerSubscription.find(params[:id])
    if customer_subscription.update(customer_subscription_params)
      render json: CustomerSubscriptionSerializer.new(customer_subscription)
-   else
-     render status: 404
    end
  end
 

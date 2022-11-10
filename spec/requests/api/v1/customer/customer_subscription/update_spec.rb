@@ -23,6 +23,8 @@ RSpec.describe CustomerSubscription do
 
       patch api_v1_customer_subscription_path(update_body)
 
+      customer_subscriptions = JSON.parse(response.body, symbolize_names: true)
+
       expect(response).to be_successful
 
       expect(CustomerSubscription.last.customer_id).to eq(customer.id)

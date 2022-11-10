@@ -82,16 +82,12 @@
           2,
           2,
           null,
-          0,
-          null,
           null,
           null,
           1,
           2,
           2,
           2,
-          null,
-          0,
           null,
           null,
           null,
@@ -128,8 +124,6 @@
           1,
           1,
           null,
-          0,
-          null,
           null,
           null,
           null
@@ -154,6 +148,6 @@
         }
       }
     },
-    "timestamp": 1668096035
+    "timestamp": 1668098692
   }
 }
