@@ -3,7 +3,7 @@ class CreateCustomerSubscription < ActiveRecord::Migration[5.2]
     create_table :customer_subscriptions do |t|
       t.references :customer, foreign_key: true
       t.references :subscription, foreign_key: true
-      t.boolean :is_subscribed 
+      t.integer :is_subscribed, :default => 1
 
       t.timestamps
     end
